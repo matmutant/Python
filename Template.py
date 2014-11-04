@@ -4,4 +4,4 @@
 
 
 
-input("Appuyez sur ENTREE pour fermer ce programme...")
+input("Press ENTER to exit...")

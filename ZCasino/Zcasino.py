@@ -57,8 +57,9 @@ while continueGame:
 		continueGame = False
 	else:
 		print(amount,"$ left")
+		exit = str() #empty string created
 		exit=input("do you wanna exit now? (y/n)")
-		if exit == "y" or exit == "Y":
+		if exit.lower() == "y":
 			print("you are leaving the game with", amount,"$")
 			continueGame=False
 

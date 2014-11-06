@@ -1,4 +1,5 @@
 # -*-coding:Utf-8 -*
+"""Word Killer is a useless little game made to test .split() and .join()"""
 wordToKill = input("enter word to kill: ")
 Rampage = True
 while Rampage:

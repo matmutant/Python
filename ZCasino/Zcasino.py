@@ -1,7 +1,7 @@
 # -*-coding:Utf-8 -*
 from math import ceil
 from random import randrange
-"""this program ask for initial $ amount, number choosen and then plays with random numbers"""
+"""this program ask for initial $ amount, number choosen and then plays with random numbers, more features might be added later (player login, keeping game results..."""
 
 amount=1000 #initial amount of money
 continueGame=True #boolean that stay true as long as player wanna play

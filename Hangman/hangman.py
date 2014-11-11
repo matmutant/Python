@@ -33,7 +33,7 @@ while continueGame :
 		print("Already tried letters: ", triedLetters)
 		print("")
 		letter = get_letter()
-		if letter in foundLetters or triedLetters:
+		if letter in foundLetters or letter in triedLetters:
 			print("You already tried this letter")
 		elif letter in wordToFind:
 			foundLetters.append(letter)
@@ -41,14 +41,14 @@ while continueGame :
 		else:
 			nbTries -= 1
 			print("No, that letter is not in that word")
-			#if letter not in triedLetters:	
 			triedLetters.append(letter)
 		foundWord = get_hiddenWord(wordToFind, foundLetters)
 	if wordToFind == foundWord:
 		print("congratulations! you found the word {0}.".format(wordToFind))
 	else:
 		print("Hanged!, you lose the game...")
-
+		print("the word was {0}.".format(wordToFind))
+	
 	#updating user score
 	scores[user] += nbTries
 

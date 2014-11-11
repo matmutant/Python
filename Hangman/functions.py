@@ -92,12 +92,3 @@ def get_hiddenWord(wholeWord, foundLetters):
 		else :
 			hiddenWord +="*"
 	return hiddenWord
-
-
-
-
-#help section
-"""Displays help if asked"""
-def help():
-	print("Halp!")
-

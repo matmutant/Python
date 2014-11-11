@@ -8,7 +8,7 @@ scores = get_scores()
 words = get_words()
 
 # printing scores
-print("scores: ", scores)
+print("Scores: ", scores)
 #print("list of words: ", words)
 
 # getting userName :
@@ -44,17 +44,17 @@ while continueGame :
 			triedLetters.append(letter)
 		foundWord = get_hiddenWord(wordToFind, foundLetters)
 	if wordToFind == foundWord:
-		print("congratulations! you found the word {0}.".format(wordToFind))
+		print("Congratulations! you found the word {0}.".format(wordToFind))
 	else:
 		print("Hanged!, you lose the game...")
-		print("the word was {0}.".format(wordToFind))
+		print("The word was {0}.".format(wordToFind))
 	
 	#updating user score
 	scores[user] += nbTries
 
 	#asking to re-play
 	exit = str() #empty string created
-	exit=input("do you wanna exit now? (y/n)")
+	exit=input("Do you wanna exit now? (y/n)")
 	if exit.lower() == "y":
 		continueGame=False
 

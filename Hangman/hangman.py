@@ -20,26 +20,28 @@ if user not in scores.keys():
 continueGame = True
 
 while continueGame :
-	print("player {0}: {1} points".format(user, scores[user]))
+	print("Player {0}: {1} points".format(user, scores[user]))
 	wordToFind = choose_word()
-	print("word to find is", wordToFind)
+	#uncomment the following ligne for testing purpose
+	#print("word to find is", wordToFind)
 	triedLetters = []
 	foundLetters = []
 	foundWord = get_hiddenWord(wordToFind, foundLetters)
 	nbTries = nbRounds
 	while wordToFind != foundWord and nbTries > 0:
 		print("Word to Find {0} ({1} tries left)".format(foundWord, nbTries))
-		print("already tried letters")
-		print(triedLetters)
+		print("Already tried letters: ", triedLetters)
+		print("")
 		letter = get_letter()
-		if letter in foundLetters:
-			print("already tried letter")
+		if letter in foundLetters or triedLetters:
+			print("You already tried this letter")
 		elif letter in wordToFind:
 			foundLetters.append(letter)
 			print("well done!")
 		else:
 			nbTries -= 1
-			print("No, that letter is no in that word")
+			print("No, that letter is not in that word")
+			#if letter not in triedLetters:	
 			triedLetters.append(letter)
 		foundWord = get_hiddenWord(wordToFind, foundLetters)
 	if wordToFind == foundWord:
@@ -59,14 +61,8 @@ while continueGame :
 # Game ended, updating scores
 save_scores(scores)
 
-#displaying user scores : 
+# Displaying user scores : 
 print("You end the game with {0} points.".format(scores[user]))
 
-
-
-
-
-
-
-
+# Prompt exit
 input("Press ENTER to exit...")

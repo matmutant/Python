@@ -56,7 +56,7 @@ if userName is invalid the fonction is called again until it is valid"""
 	#1st letter in capital, others lowercase
 	userName = userName.capitalize()
 	if not userName.isalnum or len(userName)<4:
-		print("invalid user name")
+		print("Invalid user name")
 		# function is called again
 		return get_userName()
 	else: 
@@ -68,7 +68,7 @@ def get_letter():
 	letter = input("Enter a letter: ")
 	letter  =letter.upper()
 	if len(letter)>1 or not letter.isalpha():
-		print("not a valid letter")
+		print("Not a valid letter")
 		return get_letter()
 	else: 
 		return letter
